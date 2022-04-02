@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create -calculator by Sujon</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+           *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.container{
+    width: 251px;
+    height: 400px;
+    margin: 80px auto;
+    background: #cfd0d5;
+    border-radius: 10px 10px 10px 10px;
+}
+.cell-box{
+    width: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+.signature {
+    font-family: 'Italianno', cursive;
+    font-size: 20px;
+    position: absolute;
+    bottom: -32px;
+    right: 0px;
+    color: rgb(71, 67, 67);
+}
+#display{
+    height: 40px;
+    width: 190px;
+    font-size: 38px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    border: none;
+    outline: none;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    margin: 37px 0 20px -12px;
+    background: #D7E1E3;
+    border: 11px solid #5B6066;
+    border-radius: 6px;
+}   
+.button{
+    margin: 15px 0 0 5px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    background: rgb(214 212 212);
+    box-shadow: 5px 5px 10px #DDD, -4px -4px 7px #3a3a3a;
+    display: inline-block;
+}
+.button-black{
+    background: rgb(71, 67, 67) !important;
+    color: white !important;
+    font-size: 20px;
+}
+.button-red{
+    background: rgb(200, 25, 25) !important;
+    color: white !important;
+    font-size: 20px;
+}
+
+.button:active{
+    background: #6876bb !important;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <div class="cell-box">
+              <form name="calculator">
+                  <span class="signature">Developer samiun</span>
+                  <input id="display" type="text" name="display" placeholder="0" readonly>
+                  <br>
+                  <input class="button" type="button" value="7" onclick="calculator.display.value +='7'">
+                  <input class="button" type="button" value="8" onclick="calculator.display.value +='8'">
+                  <input class="button" type="button" value="9" onclick="calculator.display.value +='9'">
+                  <input class="button-black button mathbutton" type="button" value="+" onclick="calculator.display.value +='+'">
+                  <br>
+                  <input class="button" type="button" value="4" onclick="calculator.display.value +='4'">
+                  <input class="button" type="button" value="5" onclick="calculator.display.value +='5'">
+                  <input class="button" type="button" value="6" onclick="calculator.display.value +='6'">
+                  <input class="button-black button mathbutton" type="button" value="-" onclick="calculator.display.value +='-'">
+                  <br>
+                  <input class="button" type="button" value="1" onclick="calculator.display.value +='1'">
+                  <input class="button" type="button" value="2" onclick="calculator.display.value +='2'">
+                  <input class="button" type="button" value="3" onclick="calculator.display.value +='3'">
+                  <input class="button-black button mathbutton" type="button" value="×" onclick="calculator.display.value +='*'">
+                  <br>
+                  <input class="button-red button clearbutton" type="button" value="c" onclick="calculator.display.value =''">
+                  <input class="button" type="button" value="0" onclick="calculator.display.value +='0'">
+                  <input class="button-black button mathbutton" type="button" value="=" onclick="calculator.display.value =eval(calculator.display.value)">
+                  <input class="button-black button mathbutton" type="button" value="÷" onclick="calculator.display.value +='/'">
+              </form> 
+           </div>
+       </div>
+    </div>  
+</body>
+</html>
